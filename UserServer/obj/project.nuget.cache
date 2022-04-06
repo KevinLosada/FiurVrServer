@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "J5KIlKFqyhx3TSD7WEEnJceebvpW0ecS2b+b9UvGJkT+39/Azb7jQY4qxY9HBIHSikQlrwP57EflM5yuGIHxvg==",
+  "success": true,
+  "projectFilePath": "D:\\Repositories\\FiuVrServer\\UserServer\\UserServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kevin Losada\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.3\\microsoft.aspnetcore.jsonpatch.6.0.3.nupkg.sha512",
+    "C:\\Users\\Kevin Losada\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.3\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.3.nupkg.sha512",
+    "C:\\Users\\Kevin Losada\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Kevin Losada\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Kevin Losada\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
