@@ -54,7 +54,7 @@ public class UserController : ControllerBase
     }
     
     //update inventory
-    [HttpPut("{username}/inventory")]
+    [HttpPut("inventory/{username}")]
     public User Put([FromRoute] string username, [FromQuery] int item, [FromQuery] int quantity)
     {
         return _userService.UpdateInventory(username, item, quantity);
@@ -67,7 +67,7 @@ public class UserController : ControllerBase
     }
     
     //update userprefs
-    [HttpPut("{username}/preferences")]
+    [HttpPut("preferences/{username}")]
     public User Put([FromRoute] string username, [FromQuery] int head, [FromQuery] int skin, [FromQuery] int face,
         [FromQuery] int hair, [FromQuery] int color)
     {
