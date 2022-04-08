@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SharedLibrary;
 using UserServer.Services;
@@ -16,11 +17,18 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("{username}")]
-    public User Post([FromRoute]string username)
+    public IActionResult Post([FromRoute]string username)
     {
-        _userService.CreateUser(username);
+        try
+        {
+            _userService.CreateUser(username);
+        }
+        catch (Exception e)
+        {
+            return BadRequest("User already exists");
+        }
 
-        return _userService.GetUser(username);
+        return Ok(_userService.GetUser(username));
     }
     
     [HttpGet]
@@ -31,9 +39,18 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("{username}")]
-    public User Get([FromRoute] string username)
-    { 
-        return _userService.GetUser(username);
+    public IActionResult Get([FromRoute] string username)
+    {
+        try
+        {
+            _userService.GetUser(username);
+        }
+        catch (KeyNotFoundException e)
+        {
+            Console.WriteLine(e);
+            return BadRequest("User not found");
+        }
+        return Ok(_userService.GetUser(username));
     }
     
     //update inventory
